@@ -10,7 +10,7 @@ const serverConfiguration = {
     port: 3000,
   },
   external: {
-    proxy: 'http://localhost:9000/path/to/project/',
+    proxy: 'http://localhost:9000/klb19/',
   },
 };
 
@@ -131,6 +131,13 @@ const config = function(env, args) {
         {
           from: path.resolve(__dirname, 'src', 'images', 'content'),
           to: path.resolve(__dirname, 'dist', 'images', 'content'),
+          toType: 'dir',
+        },
+      ]),
+      new CopyWebpackPlugin([
+        {
+          from: path.resolve(__dirname, 'src', 'js', 'plugins'),
+          to: path.resolve(__dirname, 'dist', 'js', 'plugins'),
           toType: 'dir',
         },
       ]),

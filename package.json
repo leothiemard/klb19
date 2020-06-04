@@ -19,28 +19,30 @@
     "2019",
     "experiment"
   ],
-  "author": "WeAreAthlon <hello@weareathlon.com> (https://www.weareathlon.com)",
+  "author": "Léo Thiémard",
   "contributors": [
     {
-      "name": "Plamen Nikolov",
-      "email": "me@pnikoloff.com",
-      "url": "https://pnikoloff.com"
+      "name": "Léo Thiémard",
+      "email": "leo@quarante-huit.ch",
+      "url": "https://quarante-huit.ch"
     }
   ],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:WeAreAthlon/frontend-webpack-boilerplate.git"
+    "url": "git@github.com:leothiemard/klb19.git"
   },
   "bugs": {
-    "url": "https://github.com/WeAreAthlon/frontend-webpack-boilerplate/issues",
-    "email": "plamen@athlonsofia.com"
+    "url": "https://github.com/leothiemard/klb19/issues",
+    "email": "leo@quarante-huit.ch"
   },
   "engines": {
-    "node": ">=10.13.0"
+    "node": ">=12.10.0"
   },
   "dependencies": {
-    "autoprefixer": "^9.7.4"
+    "autoprefixer": "^9.7.4",
+    "aws-sdk": "^2.686.0",
+    "photoswipe": "^4.1.3"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
@@ -65,7 +67,7 @@
     "html-webpack-plugin": "^3.2.0",
     "imagemin-webpack-plugin": "^2.4.2",
     "mini-css-extract-plugin": "^0.9.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^4.14.1",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "postcss-loader": "^3.0.0",
     "sass": "^1.25.0",
