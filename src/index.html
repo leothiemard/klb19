@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>KILBI – 48 – MEMORY UNIT</title>
+    <title>KILBI 2019 – MEMORY UNIT ARCHIVES – 48</title>
   </head>
   
   <body>
@@ -100,16 +100,17 @@
           }
       }
 
-      function stopVideo() {
-          player.stopVideo();
-          startBtn.classList.toggle('js-hide');
-          liveBox.classList.toggle('js-hide');
+      function pauseVideo() {
+          startBtn.classList.remove('js-hide');
+          liveBox.classList.remove('js-hide');
 
-          ytWrap.classList.toggle('js-hide');
+          ytWrap.classList.add('js-hide');
+
+          player.stopVideo();
       }
 
       liveBox.addEventListener('click', function(){
-          player.stopVideo();
+          pauseVideo();
       })
 
       infosBtn.addEventListener('click', function(){
@@ -132,10 +133,10 @@
       startBtn.addEventListener('click', function(){
         player.playVideo();
 
-        this.classList.toggle('js-hide');
+        this.classList.add('js-hide');
 
-        liveBox.classList.toggle('js-hide');
-        ytWrap.classList.toggle('js-hide');
+        liveBox.classList.remove('js-hide');
+        ytWrap.classList.remove('js-hide');
 
         logoKlb.classList.toggle('js-hide');
 
