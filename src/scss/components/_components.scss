@@ -1,15 +1,81 @@
 .c-button {
     position: fixed;
+
     top: 50%;
     left: 50%;
-    width: 100px;
-    height: 40px;
-    margin-left: -50px;
-    margin-top: -20px;
+
+    width: 250px;
+    height: 60px;
+
     font-family: 'NHaasGDs', Helvetica, Arial, sans-serif;
+    font-size: 1em;
+    line-height: 1em;
+    text-transform: uppercase;
+
+    margin-left: -125px;
+    margin-top: -30px;
+
+    border: none;
+    padding: 10px;
+    text-decoration: none;
+
+    background: yellow;
+    color: $black;
+    
+    cursor: pointer;
+    text-align: center;
+    
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    
+    
+   &:hover,
+    &:focus {
+        background: darken(yellow, 15%);
+    }
+    
+    &:focus {
+        outline: 1px solid #fff;
+        outline-offset: -4px;
+    }
+}
+
+.js-hide {
+    visibility: hidden;
+}
+
+.c-kilbi-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+      
+    img {
+        height: 75vh;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.u-flex-box {
+    flex: 1;
+
+    &:first-child { 
+        text-align: left; 
+    }
+    
+    &:last-child { 
+        text-align: right; 
+    }
 }
 
 .c-box {
+    display: inline-block;
+
     font-family: 'NHaasGDs', Helvetica, Arial, sans-serif;
     font-size: 1em;
     line-height: 1em;
@@ -19,6 +85,8 @@
 
     background-color: $white;
     color: $black;
+
+    cursor: pointer;
 }
 
 .c-box--invert {
@@ -27,6 +95,7 @@
 }
 
 .c-heading__main {
+    text-align: center;
     font-size: 2.5em;
     font-family: 'NHaasGDs', Helvetica, Arial, sans-serif;
 
@@ -40,8 +109,10 @@
     line-height: 1em;
     text-align: center;
 
+    width: 90vw;
+
     padding: 0;
-    margin-top: 1em;
+    margin: 1em auto;
 
     a {
         font-family: 'Rcklss', 'Times New Roman', Times, serif;

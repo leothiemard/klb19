@@ -7,37 +7,55 @@
   
   <body>
 
+    <div class="u-preloader">
+      <img src="images/content/preloader.gif" alt="spinner">
+    </div>
+
+    <div class="c-kilbi-logo js-logo js-hide">
+      <img src="images/content/kilbi-logo-2019.svg">
+    </div>
+
     <main>
 
       <header>
-        <h2 class="c-box">Kilbi 2019©</h2>
-        <h1 class="c-heading__main">Memory Unit <span>Archives</span></h1>
-        <h2 class="c-box c-box--invert">•&nbsp;&nbsp;Live</h2>
+        <div class="u-flex-box"><h2 class="c-box"><a href="/">Kilbi 2019©</a></h2></div>
+        <div class="u-flex-box"><h1 class="c-heading__main">Memory Unit <span>Archives</span></h1></div>
+        <div class="u-flex-box"><h2 class="c-box c-box--invert js-live js-hide"><a href="https://youtu.be/Vdk_BZZ0x3k" target="_blank">•&nbsp;&nbsp;Live</a></h2></div>
       </header>
 
-      <header id="header2">
-        <h2 class="c-box">Kilbi 2019©</h2>
-        <h1 class="c-heading__main">Memory Unit <span>Archives</span></h1>
-        <h2 class="c-box c-box--invert">•&nbsp;&nbsp;Live</h2>
-      </header>
-
-      <p class="c-text">
-        Archives by <a href="https://quarante-huit.ch" target="_blank">Atelier – Studio 48</a>.<br>Shot at <a href="http://kilbi.badbonn.ch/" target="_blank">Bad Bonn Kilbi 2019</a> (30.5  — 1.6.20).<br>All videos are unedited.<br>They are the raw material for this <a href="https://vimeo.com/367326114" target="_blank">aftermovie</a>.<br> We love you Kilbi.
+      <p class="c-text js-text js-hide">
+        Archives by <a href="https://quarante-huit.ch" target="_blank">Atelier – Studio 48</a>. Recorded at <a href="http://kilbi.badbonn.ch/" target="_blank">Bad Bonn Kilbi 2019</a> (30.5  — 1.6.20). You are watching all unedited footages shot for this <a href="https://vimeo.com/367326114" target="_blank">aftermovie</a>. We love you Kilbi.
         <br>
         <img class="c-image" src="images/content/48_saturn.svg">
       </p>
 
       <footer>
         <a class="c-link-block a-globe" href="https://quarante-huit.ch" target="_blank"><img src="images/content/globe.gif"></a>
-        <h2 class="c-box">Infos</h2>
+        <h2 class="c-box js-infos">Infos</h2>
       </footer>
 
     </main>
 
-  <!-- <button id="js-start" class="c-button">START</button> -->
-  <div id="yt-wrap"><div id="ytplayer"></div></div>
-  <!--
+    <button class="js-start c-button">Start watching</button>
+
+    <div id="yt-wrap" class="js-hide"><div id="ytplayer" class=""></div></div>
+
   <script>
+
+    const preloader = document.querySelector('.u-preloader');
+    window.addEventListener('load', function () {
+          preloader.classList.add('u-preloader--loaded');
+    });
+
+    var startBtn = document.querySelector('.js-start');
+    var infosTxt = document.querySelector('.js-text');
+    var infosBtn = document.querySelector('.js-infos');
+    var liveBox = document.querySelector('.js-live');
+    var logoKlb = document.querySelector('.js-logo');
+
+    var ytWrap = document.getElementById('yt-wrap')
+    var ytPlayer = document.getElementById('ytplayer')
+
     // 2. This code loads the IFrame Player API code asynchronously.
     var tag = document.createElement('script');
     tag.src = "https://www.youtube.com/player_api";
@@ -51,7 +69,7 @@
         player = new YT.Player('ytplayer', {
             width: '100%',
             height: '100%',
-            videoId: 'Qk_rFm4uYnY',
+            videoId: 'Vdk_BZZ0x3k',
             playerVars: {
                 'autoplay': 0,
                 'showinfo': 0,
@@ -81,14 +99,51 @@
               player.playVideo();
           }
       }
+
       function stopVideo() {
           player.stopVideo();
+          startBtn.classList.toggle('js-hide');
+          liveBox.classList.toggle('js-hide');
+
+          ytWrap.classList.toggle('js-hide');
       }
 
-      document.getElementById('js-start').addEventListener('click', function(){
-        player.playVideo();
+      liveBox.addEventListener('click', function(){
+          player.stopVideo();
       })
+
+      infosBtn.addEventListener('click', function(){
+        infosTxt.classList.toggle('js-hide');
+        console.log('hasnotclass');
+        if ( !startBtn.classList.contains( 'js-hide' ) ) {
+          console.log('hasclass');
+          startBtn.classList.add('js-hide');
+        } else if ( !ytWrap.classList.contains( 'js-hide' ) ) {
+
+        } else {
+          startBtn.classList.remove('js-hide');
+        }
+
+        if ( !logoKlb.classList.contains( 'js-hide' ) ) {
+          logoKlb.classList.add( 'js-hide' );
+        }
+      })
+
+      startBtn.addEventListener('click', function(){
+        player.playVideo();
+
+        this.classList.toggle('js-hide');
+
+        liveBox.classList.toggle('js-hide');
+        ytWrap.classList.toggle('js-hide');
+
+        logoKlb.classList.toggle('js-hide');
+
+        setTimeout(function () {
+          logoKlb.classList.add('js-hide');
+        }, 8000);
+      })
+
     </script>
-    -->
   </body>
 </html>
