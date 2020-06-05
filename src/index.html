@@ -104,6 +104,7 @@
           startBtn.classList.remove('js-hide');
           liveBox.classList.remove('js-hide');
 
+          infosTxt.classList.add('js-hide');
           ytWrap.classList.add('js-hide');
 
           player.stopVideo();
@@ -134,7 +135,8 @@
         player.playVideo();
 
         this.classList.add('js-hide');
-
+        infosTxt.classList.add('js-hide');
+        
         liveBox.classList.remove('js-hide');
         ytWrap.classList.remove('js-hide');
 
