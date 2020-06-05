@@ -6,11 +6,37 @@
   </head>
   
   <body>
-    
-    <button id="start">START</button>
 
+    <main>
+
+      <header>
+        <h2 class="c-box">Kilbi 2019©</h2>
+        <h1 class="c-heading__main">Memory Unit <span>Archives</span></h1>
+        <h2 class="c-box c-box--invert">•&nbsp;&nbsp;Live</h2>
+      </header>
+
+      <header id="header2">
+        <h2 class="c-box">Kilbi 2019©</h2>
+        <h1 class="c-heading__main">Memory Unit <span>Archives</span></h1>
+        <h2 class="c-box c-box--invert">•&nbsp;&nbsp;Live</h2>
+      </header>
+
+      <p class="c-text">
+        Archives by <a href="https://quarante-huit.ch" target="_blank">Atelier – Studio 48</a>.<br>Shot at <a href="http://kilbi.badbonn.ch/" target="_blank">Bad Bonn Kilbi 2019</a> (30.5  — 1.6.20).<br>All videos are unedited.<br>They are the raw material for this <a href="https://vimeo.com/367326114" target="_blank">aftermovie</a>.<br> We love you Kilbi.
+        <br>
+        <img class="c-image" src="images/content/48_saturn.svg">
+      </p>
+
+      <footer>
+        <a class="c-link-block a-globe" href="https://quarante-huit.ch" target="_blank"><img src="images/content/globe.gif"></a>
+        <h2 class="c-box">Infos</h2>
+      </footer>
+
+    </main>
+
+  <!-- <button id="js-start" class="c-button">START</button> -->
   <div id="yt-wrap"><div id="ytplayer"></div></div>
-
+  <!--
   <script>
     // 2. This code loads the IFrame Player API code asynchronously.
     var tag = document.createElement('script');
@@ -27,13 +53,12 @@
             height: '100%',
             videoId: 'Qk_rFm4uYnY',
             playerVars: {
-                'autoplay': 1,
+                'autoplay': 0,
                 'showinfo': 0,
                 'autohide': 1,
-                'loop': 1,
+                'loop': 0,
                 'controls': 0,
-                'modestbranding': 1,
-                'vq': 'hd1080'
+                'modestbranding': 1
             },
             events: {
                 'onReady': onPlayerReady,
@@ -44,7 +69,7 @@
 
       // 4. The API will call this function when the video player is ready.
       function onPlayerReady(event) {
-          event.target.playVideo();
+          // event.target.playVideo();
       }
 
       // 5. The API calls this function when the player's state changes.
@@ -60,9 +85,10 @@
           player.stopVideo();
       }
 
-      document.getElementById('start').addEventListener('click', function(){
+      document.getElementById('js-start').addEventListener('click', function(){
         player.playVideo();
       })
     </script>
+    -->
   </body>
 </html>

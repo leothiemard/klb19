@@ -1,0 +1,61 @@
+.c-button {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 40px;
+    margin-left: -50px;
+    margin-top: -20px;
+    font-family: 'NHaasGDs', Helvetica, Arial, sans-serif;
+}
+
+.c-box {
+    font-family: 'NHaasGDs', Helvetica, Arial, sans-serif;
+    font-size: 1em;
+    line-height: 1em;
+    text-transform: uppercase;
+
+    padding: 5px;
+
+    background-color: $white;
+    color: $black;
+}
+
+.c-box--invert {
+    background-color: red;
+    color: $white;
+}
+
+.c-heading__main {
+    font-size: 2.5em;
+    font-family: 'NHaasGDs', Helvetica, Arial, sans-serif;
+
+    span {
+        font-family: 'Rcklss', 'Times New Roman', Times, serif;
+    }
+}
+
+.c-text {
+    font-size: 4.5em;
+    line-height: 1em;
+    text-align: center;
+
+    padding: 0;
+    margin-top: 1em;
+
+    a {
+        font-family: 'Rcklss', 'Times New Roman', Times, serif;
+        text-decoration: underline;
+        color: $white;
+    }
+
+    img {
+        display: inline-block;
+        margin-top: 20px;
+        width: 3em;
+    }
+}
+
+.c-image {
+    // width: 200px;
+}
