@@ -18,13 +18,13 @@
     <main>
 
       <header>
-        <div class="u-flex-box"><h2 class="c-box"><a href="http://kilbi.badbonn.ch/" target="_blank">Kilbi 2019©</a></h2></div>
+        <div class="u-flex-box"><h2 class="c-box"><a href="http://kilbi.badbonn.ch/2019" target="_blank">Kilbi 2019©</a></h2></div>
         <div class="u-flex-box"><h1 class="c-heading__main">Memory Unit <span>Archives</span></h1></div>
         <div class="u-flex-box"><h2 class="c-box c-box--invert js-live js-hide"><a href="https://youtu.be/Vdk_BZZ0x3k" target="_blank">•&nbsp;&nbsp;Live</a></h2></div>
       </header>
 
       <p class="c-text js-text js-hide">
-        Archives by <a href="https://quarante-huit.ch" target="_blank">Atelier – Studio 48</a>. Recorded at <a href="http://kilbi.badbonn.ch/" target="_blank">Bad Bonn Kilbi 2019</a> (30.5  — 1.6.20). You are watching all unedited footages shot for this <a href="https://vimeo.com/367326114" target="_blank">aftermovie</a>. We love you Kilbi.
+        Archives by <a href="https://quarante-huit.ch" target="_blank">Atelier – Studio 48</a>. Recorded at <a href="http://kilbi.badbonn.ch/2019" target="_blank">Bad Bonn Kilbi 2019</a> (30.5  — 1.6.19). You are watching all unedited footages, shot for this <a href="https://vimeo.com/367326114" target="_blank">aftermovie</a>. We love you Kilbi.
         <br>
         <img class="c-image" src="images/content/48_saturn.svg">
       </p>
@@ -43,7 +43,7 @@
   <script>
 
     const preloader = document.querySelector('.u-preloader');
-    window.addEventListener('load', function () {
+    window.addEventListener('DOMContentLoaded', function () {
           preloader.classList.add('u-preloader--loaded');
     });
 
@@ -102,7 +102,7 @@
 
       function pauseVideo() {
           startBtn.classList.remove('js-hide');
-          liveBox.classList.remove('js-hide');
+          liveBox.classList.add('js-hide');
 
           infosTxt.classList.add('js-hide');
           ytWrap.classList.add('js-hide');
